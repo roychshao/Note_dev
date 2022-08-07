@@ -61,10 +61,12 @@ app.use(session({
     }
 }));
 
+/*
 if (app.get("env") === "production") {
     app.set("trust proxy", 1);
     session.cookie.secure = true;
 }
+*/
 
 app.use(passport.initialize());
 app.use(passport.session());
