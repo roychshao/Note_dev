@@ -57,16 +57,16 @@ app.use(session({
     saveUninitialized: false,
     store: sessionStore,
     cookie: {
-        maxAge: 86400000
+        maxAge: 86400000,
+        secure: false
     }
 }));
 
-/*
+
 if (app.get("env") === "production") {
     app.set("trust proxy", 1);
     session.cookie.secure = true;
 }
-*/
 
 app.use(passport.initialize());
 app.use(passport.session());
