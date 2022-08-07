@@ -58,14 +58,13 @@ app.use(session({
     store: sessionStore,
     cookie: {
         maxAge: 86400000,
-        secure: false
+        secure: true;
     }
 }));
 
 
 if (app.get("env") === "production") {
     app.set("trust proxy", 1);
-    session.cookie.secure = true;
 }
 
 app.use(passport.initialize());
