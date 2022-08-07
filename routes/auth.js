@@ -17,7 +17,7 @@ const PORT = process.env.PORT;
 passport.use(new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: `${HOST}:${PORT}/auth/google/callback`,
+        callbackURL: `${HOST}/auth/google/callback`,
         passReqToCallback: true
     },
     async function (req, res, accessToken, refreshToken, profile, done) {
