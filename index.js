@@ -40,8 +40,9 @@ app.use(morgan('combined', { stream: accessLogStream }))
 app.use(express.static(path.join(__dirname,"./","assets")))
 
 //設定localhost port
+const HOST = process.env.HOST;
 const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Server Running on Port: ${HOST}:${PORT}`))
 
 //設定request body parser
 app.use(bodyParser.urlencoded({ extended: false }));

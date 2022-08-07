@@ -10,12 +10,14 @@ import { get_items } from "./../controller/item.js";
 dotenv.config();
 var router = express.Router();
 const secret = process.env.SECRET;
+const HOST = process.env.HOST;
+const PORT = process.env.PORT;
 
 //設定passport
 passport.use(new GoogleStrategy({
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "http://localhost:3000/auth/google/callback",
+        callbackURL: `${HOST}:${PORT}/auth/google/callback`,
         passReqToCallback: true
     },
     async function (req, res, accessToken, refreshToken, profile, done) {
@@ -90,7 +92,7 @@ router.get('/google/success', isLoggedIn, (req, res, next) => {
         next();
     } else {
         console.log(req.user.result);
-        res.redirect("http://localhost:3000/#/home");
+        res.redirect(`${HOST}:${PORT}/#/home`);
     }
 }, signup);
 

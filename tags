@@ -3,6 +3,7 @@ accessLogStream	/home/roy/codes/Note_dev/index.js	/^var accessLogStream = fs.cre
 AnonymousFunctionbdfbca780100	/home/roy/codes/Note_dev/index.js	/^        req.session.destroy(function(e){$/;"	f	language:JavaScript
 app	/home/roy/codes/Note_dev/index.js	/^const app = express();$/;"	C	language:JavaScript
 MYSQLStore	/home/roy/codes/Note_dev/index.js	/^const MYSQLStore = mysqlSession(session);$/;"	C	language:JavaScript
+PORT	/home/roy/codes/Note_dev/index.js	/^const PORT = process.env.PORT;$/;"	C	language:JavaScript
 sessionStore	/home/roy/codes/Note_dev/index.js	/^var sessionStore = new MYSQLStore({}, pool)$/;"	v	language:JavaScript
 __dirname	/home/roy/codes/Note_dev/index.js	/^const __dirname = path.dirname(__filename);$/;"	C	language:JavaScript
 __filename	/home/roy/codes/Note_dev/index.js	/^const __filename = fileURLToPath(import.meta.url);$/;"	C	language:JavaScript

@@ -1,4 +1,9 @@
+import dotenv from 'dotenv';
 import User from './../db_interact/user.js';
+
+dotenv.config();
+const HOST = process.env.HOST;
+const PORT = process.env.PORT;
 
 export const signup = async (req, res, next) => {
 
@@ -12,7 +17,7 @@ export const signup = async (req, res, next) => {
             "data": {}
         }
         console.log(response);
-        res.status(301).redirect("http://localhost:3000/#/home");
+        res.status(301).redirect(`${HOST}:${PORT}/#/home`);
     }).catch(err => {
         var response = {
             "success": false,
