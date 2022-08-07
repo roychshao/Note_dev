@@ -17,7 +17,7 @@ export const signup = async (req, res, next) => {
             "data": {}
         }
         console.log(response);
-        res.status(301).redirect(`${HOST}:${PORT}/#/home`);
+        res.status(301).redirect(`${HOST}/#/home`);
     }).catch(err => {
         var response = {
             "success": false,

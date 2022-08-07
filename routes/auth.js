@@ -92,7 +92,7 @@ router.get('/google/success', isLoggedIn, (req, res, next) => {
         next();
     } else {
         console.log(req.user.result);
-        res.redirect(`${HOST}:${PORT}/#/home`);
+        res.redirect(`${HOST}/#/home`);
     }
 }, signup);
 
