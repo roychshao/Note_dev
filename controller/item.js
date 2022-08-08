@@ -127,6 +127,8 @@ export const search_items = async (req, res) => {
                 item_obj.description = results[i].description;
                 item_obj.date = results[i].date;
                 item_obj.time = results[i].time;
+                item_obj.done = Boolean(results[i].done);
+                item_obj.collected = Boolean(results[i].collected);
                 response.data.push(item_obj);
             }
             console.log(response);
