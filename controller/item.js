@@ -14,8 +14,8 @@ export const get_items = async (req, res) => {
             for(var i = 0; i < results.length; ++i) {
                 var item_obj = {};
                 item_obj.id = results[i].id;
-                item_obj.title = results[i].title;
-                item_obj.description = results[i].description;
+                item_obj.title = results[i].title.slice(1, results[i].title.length-1);
+                item_obj.description = results[i].description.slice(1, results[i].description.length-1);
                 item_obj.date = results[i].date;
                 item_obj.time = results[i].time;
                 item_obj.done = Boolean(results[i].done);
@@ -50,8 +50,8 @@ export const get_done_items = async (req, res) => {
             for(var i = 0; i < results.length; ++i) {
                 var item_obj = {};
                 item_obj.id = results[i].id;
-                item_obj.title = results[i].title;
-                item_obj.description = results[i].description;
+                item_obj.title = results[i].title.slice(1, results[i].title.length-1);
+                item_obj.description = results[i].description.slice(1, results[i].description.length-1);
                 item_obj.date = results[i].date;
                 item_obj.time = results[i].time;
                 item_obj.done = Boolean(results[i].done);
@@ -86,8 +86,8 @@ export const get_collected_items = async (req, res) => {
             for(var i = 0; i < results.length; ++i) {
                 var item_obj = {};
                 item_obj.id = results[i].id;
-                item_obj.title = results[i].title;
-                item_obj.description = results[i].description;
+                item_obj.title = results[i].title.slice(1, results[i].title.length-1);
+                item_obj.description = results[i].description.slice(1, results[i].description.length-1);
                 item_obj.date = results[i].date;
                 item_obj.time = results[i].time;
                 item_obj.done = Boolean(results[i].done);
@@ -123,8 +123,8 @@ export const search_items = async (req, res) => {
             for(var i = 0; i < results.length; ++i) {
                 var item_obj = {};
                 item_obj.id = results[i].id;
-                item_obj.title = results[i].title;
-                item_obj.description = results[i].description;
+                item_obj.title = results[i].title.slice(1, results[i].title.length-1);
+                item_obj.description = results[i].description.slice(1, results[i].description.length-1);
                 item_obj.date = results[i].date;
                 item_obj.time = results[i].time;
                 item_obj.done = Boolean(results[i].done);

@@ -97,7 +97,7 @@ const insert_item = (user_id, id, title, description, date, time) => {
                 reject(err);
             } else {
                 console.log("pool connected.");
-                await conn.query(sql, [id, user_id, title, description, date, time], (err, results, fields) => {
+                await conn.query(sql, [id, user_id, pool.escape(title), pool.escape(description), date, time], (err, results, fields) => {
                     if(err)
                         reject(err);
                     else {
